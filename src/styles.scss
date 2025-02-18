@@ -3675,6 +3675,17 @@ textarea.form-control-lg {
   background-color: var(--bs-nav-tabs-link-active-bg);
   border-color: var(--bs-nav-tabs-link-active-border-color);
 }
+
+.nav-item .active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
+  border-radius: 8px;
+  padding: 5px 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+
 .nav-tabs .dropdown-menu {
   margin-top: calc(-1 * var(--bs-nav-tabs-border-width));
   border-top-left-radius: 0;

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ScrollSpyDirective } from '../directives/scroll-spy.directive';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [ScrollSpyDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
