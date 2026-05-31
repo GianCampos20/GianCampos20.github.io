@@ -1,0 +1,154 @@
+<!-- ═══ NAV ═══ -->
+<header class="fixed inset-x-0 top-0 z-50 transition-all duration-300" [ngClass]="{
+    'bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm shadow-black/5': sc
+  }">
+
+    <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main navigation">
+        <a href="#hero" class="font-display font-bold text-xl tracking-tight">
+            Gian<span class="text-accent">Campos</span>
+        </a>
+
+        <ul class="hidden md:flex items-center gap-8 text-sm" role="list">
+
+            <li>
+                <a href="#services" class="nl transition-colors hover:text-zinc-900 dark:hover:text-white"
+                    [class.text-zinc-900]="s === 'services'" [class.dark:text-white]="s === 'services'"
+                    [class.text-zinc-500]="s !== 'services'" [class.dark:text-zinc-400]="s !== 'services'">
+                    Servicios
+                </a>
+            </li>
+
+            <li>
+                <a href="#experiencia" class="nl transition-colors hover:text-zinc-900 dark:hover:text-white"
+                    [class.text-zinc-900]="s === 'experiencia'" [class.dark:text-white]="s === 'experiencia'"
+                    [class.text-zinc-500]="s !== 'experiencia'" [class.dark:text-zinc-400]="s !== 'experiencia'">
+                    Experiencia
+                </a>
+            </li>
+
+            <li>
+                <a href="#Educacion" class="nl transition-colors hover:text-zinc-900 dark:hover:text-white"
+                    [class.text-zinc-900]="s === 'Educacion'" [class.dark:text-white]="s === 'Educacion'"
+                    [class.text-zinc-500]="s !== 'Educacion'" [class.dark:text-zinc-400]="s !== 'Educacion'">
+                    Educación
+                </a>
+            </li>
+
+            <li>
+                <a href="#about" class="nl transition-colors hover:text-zinc-900 dark:hover:text-white"
+                    [class.text-zinc-900]="s === 'about'" [class.dark:text-white]="s === 'about'"
+                    [class.text-zinc-500]="s !== 'about'" [class.dark:text-zinc-400]="s !== 'about'">
+                    Sobre Mi
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects" class="nl transition-colors hover:text-zinc-900 dark:hover:text-white"
+                    [class.text-zinc-900]="s === 'projects'" [class.dark:text-white]="s === 'projects'"
+                    [class.text-zinc-500]="s !== 'projects'" [class.dark:text-zinc-400]="s !== 'projects'">
+                    Proyectos
+                </a>
+            </li>
+
+            <li>
+                <a href="#interests" class="nl transition-colors hover:text-zinc-900 dark:hover:text-white"
+                    [class.text-zinc-900]="s === 'interests'" [class.dark:text-white]="s === 'interests'"
+                    [class.text-zinc-500]="s !== 'interests'" [class.dark:text-zinc-400]="s !== 'interests'">
+                    Intereses
+                </a>
+            </li>
+
+            <li>
+                <a href="#certificates" class="nl transition-colors hover:text-zinc-900 dark:hover:text-white"
+                    [class.text-zinc-900]="s === 'certificates'" [class.dark:text-white]="s === 'certificates'"
+                    [class.text-zinc-500]="s !== 'certificates'" [class.dark:text-zinc-400]="s !== 'certificates'">
+                    Certificados
+                </a>
+            </li>
+
+
+
+        </ul>
+
+        <div class="flex items-center gap-3">
+            <!-- dark toggle -->
+            <button (click)="toggleDark()"
+                class="w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors text-zinc-800 dark:text-zinc-200"
+                [attr.aria-label]="dark ? 'Light mode' : 'Dark mode'">
+                @if (dark) {
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                </svg>
+                } @else {
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+                </svg>
+                }
+            </button>
+            <!-- hire me -->
+            <a href="#contact"
+                class="hidden md:inline-flex items-center gap-2 shimmer bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors">
+                Contrátame <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+            <!-- hamburger -->
+            <button (click)="mm = !mm"
+                class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800"
+                [attr.aria-expanded]="mm" aria-label="Toggle menu">
+
+                @if (!mm) {
+                <!-- MENU (cerrado → mostrar hamburguesa) -->
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                }
+
+                @if (mm) {
+                <!-- CERRAR (abierto → mostrar X) -->
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                }
+
+            </button>
+        </div>
+    </nav>
+
+    <!-- mobile menu -->
+    @if (mm) {
+    <div class="md:hidden bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900">
+
+        <ul class="flex flex-col px-6 py-5 gap-4 text-sm font-medium" role="list">
+
+            <li><a href="#services" (click)="mm = false"
+                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Servicios</a></li>
+            <li><a href="#experiencia" (click)="mm = false"
+                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">experiencia</a></li>
+            <li><a href="#projects" (click)="mm = false"
+                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Proyectos</a></li>
+            <li><a href="#about" (click)="mm = false"
+                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Sobre Mi</a></li>
+            <li><a href="#educacion" (click)="mm = false"
+                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Educación</a></li>
+            <li><a href="#interests" (click)="mm = false"
+                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Intereses</a></li>
+            <li><a href="#certificates" (click)="mm = false"
+                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Certificados</a></li>
+
+            <li class="pt-2 border-t border-zinc-100 dark:border-zinc-900">
+                <a href="#contact" (click)="mm = false"
+                    class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">
+                    Contrátame →
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+    }
+</header>
