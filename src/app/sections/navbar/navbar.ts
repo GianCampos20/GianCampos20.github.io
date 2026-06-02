@@ -46,5 +46,14 @@ export class Navbar implements OnInit {
     document.documentElement.classList.toggle('dark', this.dark);
   }
 
+  goSection(id: string) {
+    this.mm = false;
+
+    document.getElementById(id)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+
 
 }

@@ -35,10 +35,10 @@
             </li>
 
             <li>
-                <a href="#about" class="nl transition-colors hover:text-zinc-900 dark:hover:text-white"
-                    [class.text-zinc-900]="s === 'about'" [class.dark:text-white]="s === 'about'"
-                    [class.text-zinc-500]="s !== 'about'" [class.dark:text-zinc-400]="s !== 'about'">
-                    Sobre Mi
+                <a href="#skills" class="nl transition-colors hover:text-zinc-900 dark:hover:text-white"
+                    [class.text-zinc-900]="s === 'skills'" [class.dark:text-white]="s === 'skills'"
+                    [class.text-zinc-500]="s !== 'skills'" [class.dark:text-zinc-400]="s !== 'skills'">
+                    Habilidades
                 </a>
             </li>
 
@@ -47,14 +47,6 @@
                     [class.text-zinc-900]="s === 'projects'" [class.dark:text-white]="s === 'projects'"
                     [class.text-zinc-500]="s !== 'projects'" [class.dark:text-zinc-400]="s !== 'projects'">
                     Proyectos
-                </a>
-            </li>
-
-            <li>
-                <a href="#interests" class="nl transition-colors hover:text-zinc-900 dark:hover:text-white"
-                    [class.text-zinc-900]="s === 'interests'" [class.dark:text-white]="s === 'interests'"
-                    [class.text-zinc-500]="s !== 'interests'" [class.dark:text-zinc-400]="s !== 'interests'">
-                    Intereses
                 </a>
             </li>
 
@@ -125,24 +117,45 @@
 
         <ul class="flex flex-col px-6 py-5 gap-4 text-sm font-medium" role="list">
 
-            <li><a href="#services" (click)="mm = false"
-                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Servicios</a></li>
-            <li><a href="#experiencia" (click)="mm = false"
-                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">experiencia</a></li>
-            <li><a href="#projects" (click)="mm = false"
-                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Proyectos</a></li>
-            <li><a href="#about" (click)="mm = false"
-                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Sobre Mi</a></li>
-            <li><a href="#educacion" (click)="mm = false"
-                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Educación</a></li>
-            <li><a href="#interests" (click)="mm = false"
-                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Intereses</a></li>
-            <li><a href="#certificates" (click)="mm = false"
-                    class="block text-zinc-700 dark:text-zinc-300 hover:text-accent">Certificados</a></li>
+            <li>
+                <a (click)="goSection('services')" class="block text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-accent">
+                    Servicios
+                </a>
+            </li>
+
+            <li>
+                <a (click)="goSection('experiencia')" class="block text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-accent">
+                    Experiencia
+                </a>
+            </li>
+
+            <li>
+                <a (click)="goSection('projects')" class="block text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-accent">
+                    Proyectos
+                </a>
+            </li>
+
+            <li>
+                <a (click)="goSection('skills')" class="block text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-accent">
+                    Habilidades
+                </a>
+            </li>
+
+            <li>
+                <a (click)="goSection('Educacion')" class="block text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-accent">
+                    Educación
+                </a>
+            </li>
+
+            <li>
+                <a (click)="goSection('certificates')" class="block text-zinc-700 dark:text-zinc-300 cursor-pointer hover:text-accent">
+                    Certificados
+                </a>
+            </li>
 
             <li class="pt-2 border-t border-zinc-100 dark:border-zinc-900">
-                <a href="#contact" (click)="mm = false"
-                    class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 rounded-full">
+                <a (click)="goSection('contact')"
+                    class="inline-flex shimmer bg-accent text-white font-medium text-sm px-5 py-2.5 cursor-pointer rounded-full">
                     Contrátame →
                 </a>
             </li>
