@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
@@ -57,3 +58,47 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# 🌐 Portafolio Personal
+
+Este es mi sitio web personal, donde muestro información sobre mí, mis habilidades y algunos de mis proyectos como desarrollador web.
+
+El proyecto está desplegado con **GitHub Pages**.
+
+---
+
+## 🚀 Demo en vivo
+
+👉 https://giancampos20.github.io/
+
+---
+
+## 🧑‍💻 Sobre mí
+
+Soy desarrollador web enfocado en el desarrollo fullstack. Me gusta crear interfaces limpias, funcionales y responsivas utilizando tecnologías web modernas.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- HTML5
+- CSS3
+- Tailwind
+- JavaScript
+- Angular
+- GitHub Pages (despliegue)
+
+---
+
+## 🎯 Objetivo del proyecto
+
+Este proyecto sirve como portafolio personal para mostrar mis habilidades en desarrollo web y proyectos.
+
+---
+
+## 📫 Contacto
+
+- GitHub: https://github.com/GianCampos20
+- Email: gianfranco03campos@gmail.com  
+- LinkedIn: https://www.linkedin.com/in/gianfranco-campos-91a7a2317
+>>>>>>> 53d485980a79a2a9bd532810e6fe179035d44bc2
